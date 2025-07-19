@@ -1,4 +1,4 @@
-import React from "react"; // Corrected: Added the required React import
+import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -30,7 +30,7 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        {/* Corrected: Replaced non-standard font class */}
+     
         <p className="font-sans text-sm uppercase md:text-[10px]">
           Welcome to Zentry
         </p>
