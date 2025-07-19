@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import Button from './Button.jsx'; // This import is unused
-// import { TiLocationArrow } from 'react-icons/ti'; // This import is unused
+
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 
@@ -18,7 +17,7 @@ const Navbar = () => {
     const { y: currentScrollY } = useWindowScroll();
 
     useEffect(() => {
-        // This effect can be simplified, but the logic remains the same for this correction.
+     
         if (currentScrollY === 0) {
             setIsNavVisible(true);
             navContainerRef.current.classList.remove('floating-nav');
@@ -31,12 +30,10 @@ const Navbar = () => {
         }
 
         setLastScrollY(currentScrollY);
-    }, [currentScrollY, lastScrollY]); // Added lastScrollY to dependency array for correctness
+    }, [currentScrollY, lastScrollY]); 
 
-    // CORRECTED GSAP EFFECT
     useEffect(() => {
-        // The target must be the .current property of the ref.
-        // The syntax is gsap.to(target, {vars}). The parenthesis was misplaced.
+     
         gsap.to(navContainerRef.current, {
             y: isNavVisible ? 0 : -100,
             opacity: isNavVisible ? 1 : 0,
