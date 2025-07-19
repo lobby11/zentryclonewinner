@@ -1,10 +1,10 @@
-import React from "react"; // Corrected: Added the required React import
+import React from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import Button from "./Button";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass}>
-    {/* Corrected: The img tag must be self-closing in JSX */}
+  
     <img src={src} alt="" />
   </div>
 );
@@ -36,18 +36,18 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col items-center text-center">
-          {/* Corrected: Replaced non-standard font class */}
+          
           <p className="mb-10 font-sans text-[10px] uppercase">
             Join Zentry
           </p>
 
           <AnimatedTitle
             title="let&#39;s b<b>u</b>ild the <br /> new era of <br /> g<b>a</b>ming t<b>o</b>gether."
-            // Corrected: The AnimatedTitle component expects "containerClass"
+           
             containerClass="special-font mb-10 !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
           />
 
-          {/* Corrected: Fixed the syntax error "className" to "className=" */}
+        
           <Button
             title="contact us"
             className="mb-10"
